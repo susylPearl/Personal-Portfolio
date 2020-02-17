@@ -38,8 +38,7 @@ class ItemList extends React.Component<Props, State> {
         });
     }
 
-    addItem = (e: any) => {
-        e.preventDefault();
+    addItem = () => {
         this.props.actions.addItem(this.state.item);
         this.setState({
             item: {
