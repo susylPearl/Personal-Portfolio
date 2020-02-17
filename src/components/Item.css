@@ -1,0 +1,7 @@
+.item{
+  list-style-type: square;  
+  font-weight: bold;
+}
+#crossIcon{
+    color: red;
+}
