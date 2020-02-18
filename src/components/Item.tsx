@@ -1,9 +1,5 @@
 import React from 'react';
-
-type ItemType = {
-    id: string,
-    name: string
-}
+import ItemType from '../interfaces/ItemType';
 
 type Props = {
     item: ItemType,
@@ -13,7 +9,7 @@ type Props = {
 export const Item = (props: Props) => {
     return (
         <div className='item'>
-            <li>{props.item.name}<button id='crossIcon' onClick={() => props.removeItem()}>(x)</button></li>
+            <li>{props.item.title}<button id='crossIcon' onClick={() => props.removeItem()}>(x)</button></li>
         </div>
     );
 }

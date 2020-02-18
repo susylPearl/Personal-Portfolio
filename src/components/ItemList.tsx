@@ -1,13 +1,11 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { addItem, removeItem } from '../store/actions';
+import { addItem, removeItem } from '../store/actions/addOrRemoveAction';
+import { fetchData } from '../store/actions/fetchItemAction';
 import { Item } from './Item';
+import ItemType from '../interfaces/ItemType';
 
-type ItemType = {
-    id: string,
-    name: string
-}
 type State = {
     item: ItemType,
 }
@@ -17,23 +15,30 @@ type Props = {
     itemList: Array<ItemType>,
     actions: {
         addItem: (value: ItemType) => void,
-        removeItem: (value: ItemType) => void
+        removeItem: (value: ItemType) => void,
+        fetchData: (value: void) => void
     }
 }
 
 class ItemList extends React.Component<Props, State> {
     state = {
         item: {
+            userId: Date.now().toString(),
             id: Date.now().toString(),
-            name: ""
+            title: "",
+            completed: false
         },
+    }
+
+    componentDidMount = () => {
+        this.props.actions.fetchData();
     }
 
     handleChange = (e: any) => {
         this.setState({
             item: {
                 ...this.state.item,
-                [e.target.name]: e.target.value
+                [e.target.title]: e.target.value
             }
         });
     }
@@ -42,8 +47,10 @@ class ItemList extends React.Component<Props, State> {
         this.props.actions.addItem(this.state.item);
         this.setState({
             item: {
+                userId: Date.now().toString(),
                 id: Date.now().toString(),
-                name: ""
+                title: "",
+                completed: false
             }
         })
     }
@@ -57,16 +64,16 @@ class ItemList extends React.Component<Props, State> {
             <div className='item-content'>
                 <div className='item-content__item-input'>
                     <input
-                        value={this.state.item.name}
+                        value={this.state.item.title}
                         onChange={this.handleChange}
                         type="text"
-                        name="name"
+                        title="title"
                     />
                     <button id='addBtn' onClick={this.addItem}>Add Item</button>
                 </div>
                 <div className='item-content__item-list'>
                     <ul>
-                        { this.props.itemList.map(item => 
+                        { this.props.itemList.flat().map(item => 
                             <Item key={item.id} item={item} removeItem={this.removeItem(item)}/>
                         )}
                     </ul>
@@ -81,7 +88,7 @@ const mapStateToProps = (state: any) => ({
 })
 
 const mapActionToProps = (dispatch: any) => ({
-    actions: bindActionCreators({ addItem, removeItem }, dispatch)
+    actions: bindActionCreators({ addItem, removeItem, fetchData }, dispatch)
 })
 
 export default connect(mapStateToProps, mapActionToProps)(ItemList);
