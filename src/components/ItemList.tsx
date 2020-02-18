@@ -23,8 +23,8 @@ type Props = {
 class ItemList extends React.Component<Props, State> {
     state = {
         item: {
-            userId: Date.now().toString(),
-            id: Date.now().toString(),
+            userId: "",
+            id: "",
             title: "",
             completed: false
         },
@@ -47,8 +47,8 @@ class ItemList extends React.Component<Props, State> {
         this.props.actions.addItem(this.state.item);
         this.setState({
             item: {
-                userId: Date.now().toString(),
-                id: Date.now().toString(),
+                userId: "",
+                id: "",
                 title: "",
                 completed: false
             }
