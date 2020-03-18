@@ -1,10 +1,14 @@
 import { ADD_ITEM, REMOVE_ITEM } from '../const';
 import ItemType from '../../interfaces/ItemType';
 
-export const addItem = (payload: ItemType) => {
+let itemId = 11111;
+export const addItem = (addedItem: ItemType) => {
     return {
         type: ADD_ITEM,
-        payload
+        payload: {
+            ...addedItem,
+            id: itemId++
+        }
     }
 }
 

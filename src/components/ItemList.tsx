@@ -1,94 +1,59 @@
-import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { useState, useCallback, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItem, removeItem } from '../store/actions/addOrRemoveAction';
 import { fetchData } from '../store/actions/fetchItemAction';
 import { Item } from './Item';
 import ItemType from '../interfaces/ItemType';
 
-type State = {
-    item: ItemType,
-}
+const ItemList = () => {
+    const initialItem = {
+        userId: "",
+        id: "",
+        title: "",
+        completed: false
+    };
 
-type Props = {
-    item: ItemType,
-    itemList: Array<ItemType>,
-    actions: {
-        addItem: (value: ItemType) => void,
-        removeItem: (value: ItemType) => void,
-        fetchData: (value: void) => void
-    }
-}
+    const [item, setItem] = useState(initialItem);
+    const dispatch = useDispatch();
+    const itemList = useSelector((state: any) => state.itemList);
 
-class ItemList extends React.Component<Props, State> {
-    state = {
-        item: {
-            userId: "",
-            id: "",
-            title: "",
-            completed: false
-        },
-    }
+    useEffect(() => {
+        dispatch(fetchData());
+    }, [dispatch]);
 
-    componentDidMount = () => {
-        this.props.actions.fetchData();
-    }
+    const handleChange = useCallback((e: any) =>
+    setItem({ ...item, [e.target.title]: e.target.value })
+    , [item]);
 
-    handleChange = (e: any) => {
-        this.setState({
-            item: {
-                ...this.state.item,
-                [e.target.title]: e.target.value
-            }
-        });
-    }
+    const saveItem = useCallback(() => {
+        dispatch(addItem(item));
+        setItem(initialItem);
+    }, [dispatch, initialItem, item]);
 
-    addItem = () => {
-        this.props.actions.addItem(this.state.item);
-        this.setState({
-            item: {
-                userId: "",
-                id: "",
-                title: "",
-                completed: false
-            }
-        })
-    }
+    const deleteItem = useCallback((item: ItemType) => {
+        dispatch(removeItem(item));
+    }, [dispatch]);
 
-    removeItem = (item: ItemType) => () => {
-        this.props.actions.removeItem(item);
-    }
-
-    render(){
         return (
             <div className='item-content'>
                 <div className='item-content__item-input'>
                     <input
-                        value={this.state.item.title}
-                        onChange={this.handleChange}
+                        value={item.title}
+                        onChange={handleChange}
                         type="text"
                         title="title"
                     />
-                    <button id='addBtn' onClick={this.addItem}>Add Item</button>
+                    <button id='addBtn' type="button" onClick={saveItem}>Add Item</button>
                 </div>
                 <div className='item-content__item-list'>
                     <ul>
-                        { this.props.itemList.flat().map(item => 
-                            <Item key={item.id} item={item} removeItem={this.removeItem(item)}/>
+                        { itemList.flat().map((item: ItemType) =>
+                        <Item key={item.id} item={item} removeItem={() => deleteItem(item)}/>
                         )}
                     </ul>
                 </div>
             </div>
         );
-    }
 }
 
-const mapStateToProps = (state: any) => ({
-    itemList: state.itemList
-})
-
-const mapActionToProps = (dispatch: any) => ({
-    actions: bindActionCreators({ addItem, removeItem, fetchData }, dispatch)
-})
-
-export default connect(mapStateToProps, mapActionToProps)(ItemList);
+export default ItemList;

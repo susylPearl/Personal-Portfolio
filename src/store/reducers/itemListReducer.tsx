@@ -4,7 +4,6 @@ import ItemType from '../../interfaces/ItemType';
 type ActionProps = {
     type: string,
     payload: ItemType,
-    initialData: ItemType
 }
 
 const defaultItems: ItemType[] = [];
@@ -12,7 +11,7 @@ const defaultItems: ItemType[] = [];
 export default function(state = defaultItems, action: ActionProps) {
     switch (action.type) {
         case RECEIVED_DATA:
-            return [...state, action.initialData];
+            return [...state, action.payload];
         case ADD_ITEM:
             return [...state, action.payload];
         case REMOVE_ITEM:

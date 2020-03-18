@@ -1,10 +1,10 @@
 import { RECEIVED_DATA } from '../const';
 import ItemType from '../../interfaces/ItemType';
 
-export const receivedData = (initialData: ItemType) => {
+export const receivedData = (payload: ItemType) => {
     return {
         type: RECEIVED_DATA,
-        initialData
+        payload
     }
 }
 
