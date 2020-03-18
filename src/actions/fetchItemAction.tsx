@@ -1,5 +1,5 @@
-import { RECEIVED_DATA } from '../const';
-import ItemType from '../../interfaces/ItemType';
+import { RECEIVED_DATA } from './actionTypes';
+import ItemType from '../interfaces/ItemType';
 
 export const receivedData = (payload: ItemType) => {
     return {

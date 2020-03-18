@@ -1,5 +1,5 @@
-import { ADD_ITEM, REMOVE_ITEM } from '../const';
-import ItemType from '../../interfaces/ItemType';
+import { ADD_ITEM, REMOVE_ITEM } from './actionTypes';
+import ItemType from '../interfaces/ItemType';
 
 let itemId = 11111;
 export const addItem = (addedItem: ItemType) => {

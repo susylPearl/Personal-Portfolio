@@ -1,5 +1,5 @@
-import { RECEIVED_DATA, ADD_ITEM, REMOVE_ITEM } from '../const';
-import ItemType from '../../interfaces/ItemType';
+import { RECEIVED_DATA, ADD_ITEM, REMOVE_ITEM } from '../actions/actionTypes';
+import ItemType from '../interfaces/ItemType';
 
 type ActionProps = {
     type: string,

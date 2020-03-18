@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem, removeItem } from '../store/actions/addOrRemoveAction';
-import { fetchData } from '../store/actions/fetchItemAction';
+import { addItem, removeItem } from '../actions/addOrRemoveAction';
+import { fetchData } from '../actions/fetchItemAction';
 import { Item } from './Item';
 import ItemType from '../interfaces/ItemType';
 
