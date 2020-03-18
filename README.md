@@ -1,5 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This project is test react app which includes, typescrip.js, react-redux state management library, react && redux hooks.
 ## Available Scripts
 
 In the project directory, you can run:
