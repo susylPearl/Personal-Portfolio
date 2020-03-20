@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
-import itemListReducer from '../reducers/itemListReducer';
+import resumeDataReducer from '../reducers/resumeDataReducer';
 
 export default function configureStore(initialState) {
     return createStore(
         combineReducers({
-            itemList: itemListReducer,
+            resumeDataReducer,
         }),
         applyMiddleware(thunk),
         initialState,
