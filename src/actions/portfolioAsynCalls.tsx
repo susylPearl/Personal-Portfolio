@@ -34,9 +34,11 @@ export const submitForm = (data: resumeDataType["formData"]) => {
         };
         return fetch('https://node-mailer-api-git-develop.chiran.now.sh/', requestOptions)
         .then(data => {
+            console.log('data sent successuflly');
             dispatch(contactFormSubmit(true));
         })
         .catch(error => {
+            console.log('error occurs while sending email');
             dispatch(contactFormSubmit(false));
         })
     }
