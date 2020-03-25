@@ -1,6 +1,5 @@
 import React, { useState, useCallback }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {ToastsContainer, ToastsStore} from 'react-toasts';
 import resumeDataType from '../interfaces/dataType';
 import { submitForm } from '../actions/portfolioAsynCalls';
 

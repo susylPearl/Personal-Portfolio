@@ -27,6 +27,17 @@ export const fetchData = () => {
 
 export const submitForm = (data: resumeDataType["formData"]) => {
     return function(dispatch: any){
-        
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        };
+        return fetch('https://node-mailer-api-akatwbj3u.now.sh', requestOptions)
+        .then(data => {
+            dispatch(contactFormSubmit(true));
+        })
+        .catch(error => {
+            dispatch(contactFormSubmit(false));
+        })
     }
 }
