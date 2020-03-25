@@ -5,7 +5,7 @@ type network = {
 };
 
 export default interface resumeDataType {
-    data:{
+    data: {
         name: string,
         image: string,
         bio: string,
@@ -20,6 +20,13 @@ export default interface resumeDataType {
         resumedownload: string,
         occupation: string,
         description: string,
-        social: Array<network>
+        social: Array<network>,
+        contactmessage: string
+    },
+    formData: {
+        contactName: string,
+        contactEmail: string,
+        contactSubject: string,
+        contactMessage: string
     }
 }

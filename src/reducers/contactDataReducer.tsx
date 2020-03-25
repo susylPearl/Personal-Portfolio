@@ -1,15 +1,12 @@
-import { RECEIVED_DATA, CONTACT_FORM_SUBMITTED } from '../actions/actionTypes';
-import resumeDataType from '../interfaces/dataType';
+import { CONTACT_FORM_SUBMITTED } from '../actions/actionTypes';
 
 type ActionProps = {
     type: string,
-    payload: resumeDataType,
+    payload: boolean,
 }
 
 export default function(state = {}, action: ActionProps) {
     switch (action.type) {
-        case RECEIVED_DATA:
-            return action.payload;
         case CONTACT_FORM_SUBMITTED:
             return action.payload;
         default:
