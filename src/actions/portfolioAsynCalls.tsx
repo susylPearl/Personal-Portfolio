@@ -32,7 +32,7 @@ export const submitForm = (data: resumeDataType["formData"]) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         };
-        return fetch('https://node-mailer-api-akatwbj3u.now.sh', requestOptions)
+        return fetch('https://node-mailer-api-git-develop.chiran.now.sh/', requestOptions)
         .then(data => {
             dispatch(contactFormSubmit(true));
         })

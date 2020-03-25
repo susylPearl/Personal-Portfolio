@@ -29,10 +29,7 @@ export const Contact = (props: resumeDataType) => {
     const handleChange = useCallback((e: any) => {
         e.preventDefault();
         setData({...contactFormData,
-            [e.target.contactName]: e.target.contactName,
-            [e.target.contactEmail]: e.target.contactEmail,
-            [e.target.contactSubject]: e.target.contactSubject,
-            [e.target.contactMessage]: e.target.contactMessage
+            [e.target.name]: e.target.value
         });
     }, [contactFormData]);
 
