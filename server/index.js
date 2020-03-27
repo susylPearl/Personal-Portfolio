@@ -26,11 +26,11 @@ app.post("/api/sendEmail", (req, res) => {
   var data = req.body;
 
   var smtpTransport = nodemailer.createTransport({
-    service: "Gmail",
-    port: 465,
+    host: "smtp.gmail.com",
+    secure: true,
     auth: {
       user: "susylpearl13@gmail.com",
-      pass: "icannotdoanything123"
+      pass: "@chiran123!!!"
     }
   });
 
