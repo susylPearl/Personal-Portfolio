@@ -950,7 +950,7 @@ footer .copyright {
  }
 footer .copyright li {
     display: inline-block;
-    margin: 0;
+    margin: 0px 0px 14px 0px;
     padding: 0;
     line-height: 24px;
 }

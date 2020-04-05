@@ -49,13 +49,18 @@
 
    /* About Section
    ------------------------------------------------------------------- */
+   #about {
+      height: auto;
+   }
    #about .profile-pic {
-      width: 114px;
-      height: 114px;
-      margin-left: 12px;
+      width: auto;
+      height: auto;
    }
    #about .contact-details { width: 50%; }
-   #about .download { width: 50%; }
+   #about .download { 
+      width: 100%;
+      text-align: inherit;
+   }
 
    /* Resume Section
    ------------------------------------------------------------------- */
@@ -215,11 +220,12 @@
 
    /* About Section
    -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
+
    #about .download .button {
-      width: 100%;
+      width: 50%;
       text-align: center;
       padding: 15px 20px;
+      margin-left: 100px;
    }
    #about .main-col { padding-right: 30px; }
 
