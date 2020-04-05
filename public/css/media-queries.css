@@ -222,10 +222,10 @@
    -------------------------------------------------------------------- */
 
    #about .download .button {
-      width: 50%;
+      width: atuo;
       text-align: center;
       padding: 15px 20px;
-      margin-left: 100px;
+      margin-left: 0px;
    }
    #about .main-col { padding-right: 30px; }
 
