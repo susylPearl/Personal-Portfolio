@@ -17,7 +17,7 @@ export const contactFormSubmit = (payload: any) => {
 
 export const fetchData = () => {
     return function(dispatch: any){
-        return fetch('https://gist.githubusercontent.com/susylPearl/afbe4dfee15c3d9d704ca112ad2f1b59/raw/7f67898552dc53e757fefce70b8673701e5edbb6/resumeData.json')
+        return fetch('https://gist.githubusercontent.com/susylPearl/afbe4dfee15c3d9d704ca112ad2f1b59/raw/4b5c32ac92c0529b2e190cf73bd06f879769d9f4/resumeData.json')
         .then(data => data.json())
         .then(data => {
             dispatch(receivedData(data));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 import resumeDataType from '../interfaces/dataType';
 
 export const Header = (props: resumeDataType) => {
@@ -21,28 +21,12 @@ export const Header = (props: resumeDataType) => {
                <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
                <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
                <ul id="nav" className="nav">
-                  <li className="current"><Link className="smoothscroll" to={'/'}>Home</Link></li>
-                  <li><Link className="smoothscroll" to={'/about'}>About</Link></li>
-                  <li><Link className="smoothscroll" to={'/resume'}>Resume</Link></li>
-                  <li><Link className="smoothscroll" to={'/works'}>Works</Link></li>
-                  <li><Link className="smoothscroll" to={'/contact'}>Contact</Link></li>
+                  <li><Link to={'/'} activeStyle={{color: 'red'}} exact>About</Link></li>
+                  <li><Link to={'/resume'} activeStyle={{color: 'red'}}>Resume</Link></li>
+                  <li><Link to={'/works'} activeStyle={{color: 'red'}}>Works</Link></li>
+                  <li><Link to={'/contact'} activeStyle={{color: 'red'}}>Contact</Link></li>
                </ul>
             </nav>
-
-            <div className="row banner">
-               <div className="banner-text">
-                  <h1 className="responsive-headline">I'm {resumeData.name}.</h1>
-                  <h3>I'm a {resumeData.city} based <span>{resumeData.occupation}</span>. {resumeData.description}.</h3>
-                  <hr />
-                  <ul className="social">
-                     {resumeData.networks}
-                  </ul>
-               </div>
-            </div>
-
-            <p className="scrolldown">
-               <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-            </p>
 
          </header> : <div></div>
    );

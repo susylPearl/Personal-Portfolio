@@ -5,12 +5,12 @@ export const Portfolio = (props: resumeDataType) => {
 
     const ProjectItem = (props: any) => {
         const project = props.project;
-        const projectImage = 'images/portfolio/' + project.image;
+        const projectImage = 'images/work/' + project.image;
         return <div>
             <div className="columns portfolio-item">
                 <div className="item-wrap">
                     <a href={project.url} title={project.title}>
-                        <img alt={project.title} src={projectImage} />
+                        <img style={{ height: '150px', width: '100%'}} alt={project.title} src={projectImage} />
                         <div className="overlay">
                             <div className="portfolio-item-meta">
                                 <h5>{project.title}</h5>
@@ -30,7 +30,7 @@ export const Portfolio = (props: resumeDataType) => {
 
     return (
         props.data ?
-            <section id="portfolio">
+            <section id="portfolio" style={{ height: '722px' }}>
                 <div className="row">
                     <div className="twelve columns collapsed">
                         <h1>Check Out Some of My Works.</h1>

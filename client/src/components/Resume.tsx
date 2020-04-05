@@ -15,7 +15,7 @@ export const Resume = (props: resumeDataType) => {
                 <p>{education.description}</p></div>
         });
         work = props.data.work.map((work) => {
-            return <div key={work.company}><h3>{work.company}</h3>
+            return <div key={work.title}><h3>{work.company}</h3>
                 <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
                 <p>{work.description}</p>
             </div>
@@ -23,7 +23,7 @@ export const Resume = (props: resumeDataType) => {
         skills = props.data.skills.map((skill) => {
             var projectImage = 'images/tech/' + skill.image;
             return <div key={skill.name} className="columns feature-item">
-                {/* <img className='skill' alt={skill.name} src={projectImage} /> */}
+                <img style={{ height: '150px', width: '100%' }} className='skill' alt={skill.name} src={projectImage} />
                 <h5>{skill.name}</h5>
                 <p>{skill.description}</p>
             </div>
