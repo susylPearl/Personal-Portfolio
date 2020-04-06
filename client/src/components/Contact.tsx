@@ -75,7 +75,7 @@ export const Contact = (props: resumeDataType) => {
                                     <textarea value={contactFormData.contactMessage} cols={30} rows={10} id="contactMessage" name="contactMessage" onChange={handleChange}></textarea>
                                 </div>
                                 <div>
-                                    <button className="submit" onClick={handleFormSubmit}>Submit</button>
+                                    <button className="submit">Submit</button>
                                     <span id="image-loader">
                                         <img alt="" src="images/loader.gif" />
                                     </span>

@@ -9,7 +9,7 @@ export const Portfolio = (props: resumeDataType) => {
         return <div>
             <div className="columns portfolio-item">
                 <div className="item-wrap">
-                    <a href={project.url} title={project.title}>
+                    <a href={project.url} title={project.title} target="_blank" rel="noopener noreferrer">
                         <img style={{ height: '150px', width: '100%'}} alt={project.title} src={projectImage} />
                         <div className="overlay">
                             <div className="portfolio-item-meta">
