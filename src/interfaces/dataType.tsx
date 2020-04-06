@@ -41,7 +41,7 @@ export default interface resumeDataType {
             city: string,
             state: string,
             zip: string
-        }
+        },
         phone: string,
         email: string,
         resumedownload: string,

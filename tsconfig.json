@@ -27,6 +27,6 @@
     "webpack.*.js"
   ],
   "include": [
-    "src"
+    "src", "jest.config.js"
   ]
 }

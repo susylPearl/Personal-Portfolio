@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from './actions/portfolioAsynCalls';
+import { fetchData } from './actions/portfolioAsynAction';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Resume } from './components/Resume';
 import { Portfolio } from './components/Portfolio';
-import './App.css';
+import './css/main.css';
 
 const  App = () => {
 

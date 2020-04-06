@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<section
+  id="about"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="three columns"
+    >
+      <img
+        alt="Chiranjhivi Ghimire"
+        className="profile-pic"
+        src="images/images/profilepic.jpg"
+      />
+    </div>
+    <div
+      className="nine columns main-col"
+    >
+      <h2>
+        About Me
+      </h2>
+      <p>
+        software developer
+      </p>
+      <div
+        className="row"
+      >
+        <div
+          className="columns contact-details"
+        >
+          <h2>
+            Contact Details
+          </h2>
+          <p
+            className="address"
+          >
+            <span>
+              chiranjhivi ghimire
+            </span>
+            <br />
+            <span>
+              chabahil
+              <br />
+              kathmandu
+               
+              Bagmati
+              , 
+              977
+            </span>
+            <br />
+            <span>
+              9866******
+            </span>
+            <br />
+            <span>
+              susylpearl13@gmail.com
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="columns download"
+  >
+    <p>
+      <a
+        className="button"
+        href="none"
+      >
+        <i
+          className="fa fa-download"
+        />
+        Download Resume
+      </a>
+    </p>
+  </div>
+</section>
+`;
+
+exports[`About component should render correctly 1`] = `
+<section
+  id="about"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="three columns"
+    >
+      <img
+        alt="Chiranjhivi Ghimire"
+        className="profile-pic"
+        src="images/images/profilepic.jpg"
+      />
+    </div>
+    <div
+      className="nine columns main-col"
+    >
+      <h2>
+        About Me
+      </h2>
+      <p>
+        software developer
+      </p>
+      <div
+        className="row"
+      >
+        <div
+          className="columns contact-details"
+        >
+          <h2>
+            Contact Details
+          </h2>
+          <p
+            className="address"
+          >
+            <span>
+              chiranjhivi ghimire
+            </span>
+            <br />
+            <span>
+              chabahil
+              <br />
+              kathmandu
+               
+              Bagmati
+              , 
+              977
+            </span>
+            <br />
+            <span>
+              9866******
+            </span>
+            <br />
+            <span>
+              susylpearl13@gmail.com
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="columns download"
+  >
+    <p>
+      <a
+        className="button"
+        href="none"
+      >
+        <i
+          className="fa fa-download"
+        />
+        Download Resume
+      </a>
+    </p>
+  </div>
+</section>
+`;

@@ -1,0 +1,31 @@
+{
+    "data": {
+        "name": "chiranjhivi ghimire",
+        "image": "images/profilepic.jpg",
+        "bio": "software developer",
+        "address": {
+            "street": "chabahil",
+            "city": "kathmandu",
+            "state": "Bagmati",
+            "zip": "977"
+        },
+        "phone": "9866******",
+        "email": "susylpearl13@gmail.com",
+        "resumedownload": "none",
+        "occupation": "software developer",
+        "description": "works as software developer",
+        "social": [],
+        "contactmessage": "test message",
+        "projects": [],
+        "skillmessage": "here are my skills",
+        "education": [],
+        "work": [],
+        "skills": []
+    },
+    "formData": {
+        "contactName": "chiranjhivi ghimire",
+        "contactEmail": "susylpearl13@gmail.com",
+        "contactSubject": "test",
+        "contactMessage": "test"
+    }
+}

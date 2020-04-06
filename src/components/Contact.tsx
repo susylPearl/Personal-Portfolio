@@ -1,7 +1,7 @@
 import React, { useState, useCallback }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import resumeDataType from '../interfaces/dataType';
-import { submitForm } from '../actions/portfolioAsynCalls';
+import { submitForm } from '../actions/portfolioAsynAction';
 
 export const Contact = (props: resumeDataType) => {
     const initialFormData = {
