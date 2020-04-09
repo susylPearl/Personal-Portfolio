@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `yarn backend`
 
 Runs the express server in the development mode.<br />
-Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 ### `yarn dev`
 
@@ -48,7 +48,6 @@ Run the test runner in the interactive watch mode.<br />
 
 #### Other Repositories:
 - Android Application: https://github.com/susylPearl/Rice-Nitrogen-Analysis-POC
-- Java Spring Framework with Hibernate Web App: https://github.com/susylPearl/InsuranceClaim
 
 #### Public Profile:
 - https://www.linkedin.com/in/chiranjhivi-ghimire-bb6a86115/
