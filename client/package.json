@@ -44,6 +44,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://localhost:3001/",
   "devDependencies": {
     "@babel/core": "*",
     "@babel/preset-env": "^7.9.0",

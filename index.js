@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
 const route = require("./route");
+const cors = require("cors");
 
-const port = 5000;
-app.use("/", route);
+const port = process.env.PORT || 3001;
+app.use(cors());
+app.use("/api", route);
+
+app.post("*", (req, res) => {
+    console.log('post all request');
+});
 
 app.listen(port,  () => {
     console.log( `Server Running at ${port}`);
