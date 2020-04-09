@@ -55,4 +55,4 @@ Run the test runner in the interactive watch mode.<br />
 - https://github.com/susylPearl
 
 #### Hosted Site Link:
-- https://susylportfolio.netlify.com/
+- https://chiran-portfolio.netlify.com/
