@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "backend": "nodemon index.js",
-    "frontend": "npm run front --prefix client",
-    "dev": "concurrently \"npm run backend\"  \"npm run start --prefix client\""
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\"  \"npm run start --prefix client\"",
+    "test": "npm run test --prefix client"
   },
   "author": "Chiranjhivi",
   "license": "ISC",

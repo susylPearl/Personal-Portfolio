@@ -1,12 +1,18 @@
+const express = require('express');
 const mailer = require("nodemailer");
 
-const sendEmail = (data, res) => {
+const router = express.Router();
+router.use(express.urlencoded({ extended: true }));
+router.use(express.json());
+
+router.post("/sendMail", (req, res) => {
+    const data = req.body;
 
     const smtpTransport = mailer.createTransport({
         service: "Gmail",
         auth: {
-            user: "susylpearl13@gmail.com",
-            pass: "@chiran123!!!"
+            user: "username",
+            pass: "password"
         }
     });
 
@@ -29,8 +35,6 @@ const sendEmail = (data, res) => {
         }
         smtpTransport.close();
     });
+});
 
-
-}
-
-module.exports = { sendEmail }
+module.exports = router;

@@ -37,7 +37,7 @@ export const Contact = (props: resumeDataType) => {
         setData(initialFormData);
     }, [initialFormData]);
 
-    const handleFormSubmit = useCallback(() => {
+    const handleFormSubmit = useCallback(async () => {
         dispatch(submitForm(contactFormData));
         if(formDataSubmitted) resetFormData();
     }, [dispatch, contactFormData, formDataSubmitted, resetFormData]);
@@ -75,7 +75,7 @@ export const Contact = (props: resumeDataType) => {
                                     <textarea value={contactFormData.contactMessage} cols={30} rows={10} id="contactMessage" name="contactMessage" onChange={handleChange}></textarea>
                                 </div>
                                 <div>
-                                    <button className="submit">Submit</button>
+                                    <button className="submit" onClick={handleFormSubmit}>Submit</button>
                                     <span id="image-loader">
                                         <img alt="" src="images/loader.gif" />
                                     </span>

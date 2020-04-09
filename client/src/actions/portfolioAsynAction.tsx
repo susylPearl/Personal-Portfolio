@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { RECEIVED_DATA_SUCCESS, RECEIVED_DATA_ERROR, EMAIL_SENT_SUCCESS, EMAIL_SENT_ERROR } from './actionTypes';
 import resumeDataType from '../interfaces/dataType';
+import { BASE_URL } from './constant';
 
 export const fetchData = () => {
     return async (dispatch: any) => {
@@ -15,13 +16,8 @@ export const fetchData = () => {
 
 export const submitForm = (data: resumeDataType["formData"]) => {
     return async (dispatch: any) => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        };
         try{
-            const response = await axios.post('/api/sendMail', requestOptions);
+            const response = await axios.post(BASE_URL + 'sendMail', data);
             dispatch({ type: EMAIL_SENT_SUCCESS, payload: response });
         } catch {
             dispatch({ type: EMAIL_SENT_ERROR });
