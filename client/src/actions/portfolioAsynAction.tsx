@@ -2,6 +2,10 @@ import axios from 'axios';
 import { RECEIVED_DATA_SUCCESS, RECEIVED_DATA_ERROR, EMAIL_SENT_SUCCESS, EMAIL_SENT_ERROR } from './actionTypes';
 import resumeDataType from '../interfaces/dataType';
 
+export const showLoader = () => {
+
+}
+
 export const fetchData = () => {
     return async (dispatch: any) => {
         try{

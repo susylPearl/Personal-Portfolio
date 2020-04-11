@@ -1,7 +1,7 @@
 {
 	"env": {
 		"development": {
-			"plugins": ["transform-es2015-modules-commonjs"]
+			"plugins": ["transform-es2015-modules-commonjs", "emotion"]
 		},
 		"test": {
 			"plugins": ["transform-es2015-modules-commonjs", "@babel/plugin-proposal-class-properties"],

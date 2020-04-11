@@ -283,7 +283,6 @@ ul#nav li.current a { color: #F06000; }
 	-moz-transition: opacity 0.3s ease-in-out;
 	-o-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
-   background: url(/public/images/overlay-bg.png) repeat;
 }
 .portfolio-item .item-wrap .link-icon {
    display: block;
@@ -308,6 +307,7 @@ ul#nav li.current a { color: #F06000; }
 }
 .portfolio-item .item-wrap img {
    vertical-align: bottom;
+   object-fit: cover;
 }
 .portfolio-item .portfolio-item-meta { padding: 18px }
 .portfolio-item .portfolio-item-meta h5 {
@@ -447,6 +447,38 @@ ul#nav li.current a { color: #F06000; }
    position: relative;
    left: 18px;
    top: 17px;
+}
+
+/*
+** Loader
+*/
+.sweet-loading {
+   width: 100px;
+   height: 100px;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   text-align: center;
+   padding: 10px;
+   margin-left: -50px;
+   margin-top: -50px;
+   z-index: 3;
+   overflow: auto;
+}
+
+.Toastify__toast--success {
+   background: #aaa;
+}
+
+#contact .blur {
+   filter: blur(1px);
+}
+
+/*
+** Button hover
+*/
+.noHover{
+   pointer-events: none;
 }
 
 /* ------------------------------------------------------------------ */

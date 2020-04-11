@@ -40,6 +40,7 @@ Run the test runner in the interactive watch mode.<br />
 
 #### TODO Task:
 - Integrate with Server and contact Email work correctly.
+- Add Validation Functionality on Contact Form.
 - Increase Test case coverage for existing components.
 - Add one more Tab for `Blog` section where i can share my technical knowledge.
 - Implement `Material-UI` React UI framework for increasing UI/UX design features.

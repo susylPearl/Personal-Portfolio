@@ -13,7 +13,7 @@ router.post("/sendMail", (req, res) => {
         port: 587,
         auth: {
             user: "sushilpearl13@gmail.com",
-            pass: "@chiran123!!!"
+            pass: "pswd****"
         }
     });
 
@@ -35,7 +35,6 @@ router.post("/sendMail", (req, res) => {
             res.send('Success');
         }
     });
-
     smtpTransport.close();
 });
 

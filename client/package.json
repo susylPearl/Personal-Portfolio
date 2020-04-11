@@ -44,7 +44,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001/",
   "devDependencies": {
     "@babel/core": "*",
     "@babel/preset-env": "^7.9.0",
@@ -58,6 +57,8 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "http-proxy-middleware": "^1.0.3",
+    "react-spinners": "^0.8.1",
+    "react-toastify": "^5.5.0",
     "ts-jest": "^25.3.1"
   }
 }

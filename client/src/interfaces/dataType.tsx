@@ -60,5 +60,5 @@ export default interface resumeDataType {
         contactEmail: string,
         contactSubject: string,
         contactMessage: string
-    }
+    } | undefined
 }

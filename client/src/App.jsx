@@ -13,7 +13,7 @@ import './css/main.css';
 
 const  App = () => {
 
-  let resumeData = useSelector(state => state.resumeDataReducer);
+  const resumeData = useSelector(state => state.resumeDataReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
