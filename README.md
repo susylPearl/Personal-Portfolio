@@ -48,6 +48,7 @@ Run the test runner in the interactive watch mode.<br />
 - Responsive design implementation.
 
 #### Other Repositories:
+- pokedex app in react with Material-UI: https://github.com/susylPearl/pokedex
 - Android Application: https://github.com/susylPearl/Rice-Nitrogen-Analysis-POC
 
 #### Public Profile:
